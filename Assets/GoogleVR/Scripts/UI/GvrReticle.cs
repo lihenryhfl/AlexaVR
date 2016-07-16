@@ -28,6 +28,8 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   // Private members
   private Material materialComp;
   private GameObject targetObj;
+  public GameObject targetPicker;
+  public GameObject setTargetOn;
 
   // Current inner angle of the reticle (in degrees).
   private float reticleInnerAngle = 0.0f;
@@ -123,6 +125,12 @@ public class GvrReticle : MonoBehaviour, IGvrGazePointer {
   /// the user begins pressing the trigger.
   public void OnGazeTriggerStart(Camera camera) {
     // Put your reticle trigger start logic here :)
+	RaycastHit hit;
+	Physics.Raycast(camera.transform.position, camera.transform.forward, out hit);
+	targetPicker.transform.position = hit.point + hit.normal * (float)0.01;
+	if (setTargetOn != null) {
+		setTargetOn.SendMessage ("SetTarget", targetPicker.transform);
+	}
   }
 
   /// Called when a trigger event is finished. This is practically when

@@ -18,5 +18,5 @@ docClient.scan(params, function(err, data) {
     } else {
         console.log("Query succeeded.");
 console.log(JSON.stringify(data, null, 2));
-console.log(data.Items[(data.Items.length)-1]);        
+console.log(data.Items[(data.Items.length)-1]);
 }});
