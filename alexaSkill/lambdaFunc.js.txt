@@ -1,0 +1,20 @@
+var http = require('http')
+exports.handler = function(event, context) {
+    // TODO implement
+    console.log("Nothing", event)
+    
+ 
+ 
+ 
+    var result = {
+        "version": "1.0",
+        "response": {
+            "OutputSpeech":{
+                "type": "PlainText",
+                "text": "Ok Ok Ok Ok"
+            },
+            "shouldEndSession": true
+        }
+    };
+    context.succeed(result);
+};

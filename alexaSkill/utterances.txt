@@ -1,0 +1,3 @@
+GameCommand go {Command}
+GameCommand {Command}
+GameCommand please do {Command}
