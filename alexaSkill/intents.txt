@@ -1,0 +1,13 @@
+{
+  "intents":[
+    {
+      "intent": "GameCommand",
+      "slots":[
+        {
+          "name": "Command",
+          "type": "CMD"
+        }
+      ]
+    }
+  ]
+}
