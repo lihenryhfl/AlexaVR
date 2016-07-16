@@ -44,7 +44,7 @@ public class Polling : MonoBehaviour {
 								continue;
 							}
 						}
-						if (/*firstRun == false &&*/ freshItem == true && entry.Key == "utterance") {
+						if (firstRun == false && freshItem == true && entry.Key == "utterance") {
 							string[] rets = jsonParser.processASR(entry.Value.S);
 							aiKevin.OnAlexaCommand(rets);
 							break;
