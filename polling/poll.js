@@ -2,8 +2,6 @@ var AWS = require('aws-sdk');
 
 AWS.config.update({region: 'us-east-1'});
 
-//AWS.config.update({accessKeyId: 'AKIAJTSSTWHJJYL5W6FQ', secretAccessKey: '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'});
-
 var docClient = new AWS.DynamoDB.DocumentClient();
 
 var timestamp=new Date().toLocaleString();
